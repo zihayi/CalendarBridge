@@ -1,0 +1,14 @@
+state/
+data/
+dist/
+dev/.build/
+.local-build.json
+__pycache__/
+*.pyc
+*.apk
+*.idsig
+*.p12
+*.jks
+*.key
+*.log
+android/src/**/BuildConfig.java

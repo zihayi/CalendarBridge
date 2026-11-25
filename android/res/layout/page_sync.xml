@@ -1,0 +1,52 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/page_sync" android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none">
+    <local.calendar.readonly.BridgeColumn style="@style/Page" android:layout_gravity="top|center_horizontal">
+        <TextView style="@style/Label.Kicker" android:text="CALENDAR BRIDGE" />
+        <TextView style="@style/Label.Title" android:text="@string/home" />
+        <LinearLayout style="@style/Card" android:background="@drawable/hero" android:padding="20dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/pair_badge" style="@style/Label.Small" android:background="@drawable/panel" android:gravity="center_vertical"
+                        android:paddingHorizontal="9dp" android:paddingVertical="3dp" android:drawableStart="@drawable/dot" android:drawablePadding="6dp" android:text="未配对" />
+                    <TextView android:id="@+id/hero_title" style="@style/Label" android:text="连接到电脑" android:textColor="#314E3F" android:textSize="23sp" android:layout_marginTop="9dp" />
+                </LinearLayout>
+                <ImageView android:id="@+id/device_scene" android:layout_width="116dp" android:layout_height="82dp" android:layout_marginStart="4dp" android:scaleType="fitCenter" android:src="@drawable/device_scene" android:importantForAccessibility="no" />
+            </LinearLayout>
+            <TextView android:id="@+id/hero_caption" style="@style/Label.Body" android:layout_marginTop="6dp" android:text="@string/unpaired_caption" />
+            <Button android:id="@+id/main_action" style="@style/Action.Primary" android:layout_marginTop="17dp" android:text="@string/search"
+                android:paddingHorizontal="16dp" android:gravity="start|center_vertical" android:drawableEnd="@drawable/ic_wifi" android:drawableTint="@color/surface" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/guide" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView style="@style/Label.Section" android:text="首次配对" />
+            <LinearLayout style="@style/Card">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView style="@style/Label.Number" android:text="01" />
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView style="@style/Label" android:text="在电脑开启配对" />
+                        <TextView style="@style/Label.Body" android:layout_marginTop="4dp" android:text="打开 WallNote → 偏好设置 → 手机日历同步，点击「配对手机」。" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View style="@style/Rule" android:layout_marginVertical="14dp" android:layout_marginStart="44dp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView style="@style/Label.Number" android:text="02" />
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView style="@style/Label" android:text="核对六位验证码" />
+                        <TextView style="@style/Label.Body" android:layout_marginTop="4dp" android:text="在手机搜索并选择自己的电脑。两端号码相同，再在电脑确认配对。" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/sync_record" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <TextView style="@style/Label.Section" android:text="同步概况" />
+            <LinearLayout style="@style/Card">
+                <TextView style="@style/Label" android:text="最近上传" android:drawableStart="@drawable/ic_clock" android:drawablePadding="9dp" android:gravity="center_vertical" />
+                <TextView android:id="@+id/upload_time" style="@style/Label" android:textSize="19sp" android:layout_marginTop="12dp" />
+                <TextView android:id="@+id/sync_result" style="@style/Label.Body" android:layout_marginTop="5dp" />
+                <View style="@style/Rule" android:layout_marginVertical="13dp" />
+                <TextView android:id="@+id/access_summary" style="@style/Label.Small" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView style="@style/Label.Small" android:layout_marginTop="16dp" android:drawableStart="@drawable/ic_shield" android:drawablePadding="7dp" android:gravity="center_vertical" android:text="日历通过局域网加密传输" />
+    </local.calendar.readonly.BridgeColumn>
+</ScrollView>

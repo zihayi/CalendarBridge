@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- WallNote's management shell: green #477c66, warm ink, quiet paper and thin borders. -->
+    <color name="green">#477C66</color>
+    <color name="green_dark">#32634E</color>
+    <color name="green_soft">#EDF3EF</color>
+    <color name="sage">#9EAE87</color>
+    <color name="ink">#303B38</color>
+    <color name="muted">#617069</color>
+    <color name="paper">#F6F7F9</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="line">#E4EAE6</color>
+    <color name="error">#994C40</color>
+
+    <style name="BridgeTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:colorAccent">@color/green</item>
+        <item name="android:colorControlHighlight">#20477C66</item>
+        <item name="android:windowBackground">@color/paper</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@color/paper</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:alertDialogTheme">@style/BridgeDialog</item>
+    </style>
+    <style name="BridgeDialog" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/green</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:textColorSecondary">@color/muted</item>
+        <item name="android:windowBackground">@drawable/panel</item>
+    </style>
+
+    <style name="Page">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingStart">20dp</item><item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">24dp</item><item name="android:paddingBottom">24dp</item>
+    </style>
+    <style name="Card">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item><item name="android:background">@drawable/panel</item>
+        <item name="android:padding">18dp</item>
+    </style>
+    <style name="Label">
+        <item name="android:layout_width">wrap_content</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/ink</item><item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Label.Body">
+        <item name="android:textSize">14sp</item><item name="android:textColor">@color/muted</item>
+        <item name="android:fontFamily">sans-serif</item><item name="android:lineSpacingExtra">2dp</item>
+    </style>
+    <style name="Label.Small" parent="Label.Body"><item name="android:textSize">12sp</item></style>
+    <style name="Label.Kicker">
+        <item name="android:textSize">11sp</item><item name="android:letterSpacing">0.16</item>
+        <item name="android:textColor">@color/green_dark</item>
+        <item name="android:drawableStart">@drawable/dot</item><item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center_vertical</item><item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="Label.Title">
+        <item name="android:textSize">28sp</item><item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+    <style name="Label.Section">
+        <item name="android:textSize">17sp</item><item name="android:layout_marginTop">22dp</item>
+        <item name="android:layout_marginBottom">9dp</item>
+    </style>
+    <style name="Label.Number">
+        <item name="android:textSize">12sp</item><item name="android:fontFamily">monospace</item>
+        <item name="android:background">@drawable/soft_tile</item><item name="android:textColor">@color/green_dark</item>
+        <item name="android:minWidth">32dp</item><item name="android:minHeight">32dp</item>
+        <item name="android:padding">4dp</item><item name="android:gravity">center</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="Rule">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line</item><item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="Action" parent="@android:style/Widget.Material.Light.Button">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item><item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">12dp</item><item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">7dp</item><item name="android:paddingBottom">7dp</item>
+        <item name="android:textSize">15sp</item><item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item><item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item><item name="android:stateListAnimator">@null</item>
+        <item name="android:textColor">@color/action_text</item><item name="android:backgroundTint">@null</item>
+        <item name="android:background">@drawable/action_secondary</item>
+    </style>
+    <style name="Action.Primary"><item name="android:background">@drawable/action_primary</item><item name="android:textColor">@color/surface</item></style>
+    <style name="Action.Half"><item name="android:layout_width">0dp</item><item name="android:layout_weight">1</item></style>
+    <style name="Action.Tab">
+        <item name="android:layout_width">0dp</item><item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/tab_ink</item><item name="android:background">@drawable/tab_background</item>
+    </style>
+    <style name="PreferenceSwitch" parent="@android:style/Widget.Material.Light.CompoundButton.Switch">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">64dp</item><item name="android:paddingTop">10dp</item><item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">15sp</item><item name="android:textColor">@color/ink</item>
+        <item name="android:switchPadding">16dp</item><item name="android:gravity">center_vertical</item>
+        <item name="android:track">@drawable/switch_track</item><item name="android:trackTint">@null</item>
+        <item name="android:thumb">@drawable/switch_thumb</item><item name="android:thumbTint">@null</item>
+        <item name="android:switchMinWidth">42dp</item><item name="android:showText">false</item><item name="android:splitTrack">false</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:saveEnabled">false</item>
+    </style>
+    <style name="Field" parent="@android:style/Widget.Material.Light.EditText">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item><item name="android:minHeight">48dp</item>
+        <item name="android:textSize">14sp</item><item name="android:textColor">@color/ink</item>
+        <item name="android:textColorHint">@color/muted</item><item name="android:background">@drawable/field</item>
+        <item name="android:paddingStart">12dp</item><item name="android:paddingEnd">12dp</item>
+        <item name="android:layout_marginTop">5dp</item><item name="android:layout_marginBottom">12dp</item>
+        <item name="android:saveEnabled">false</item>
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="home">日历同步</string>
+    <string name="settings">偏好设置</string>
+    <string name="search">搜索电脑</string>
+    <string name="unpaired_caption">手机和电脑连入同一 Wi-Fi 后即可配对。</string>
+    <string name="paired_caption">打开电脑上的 WallNote，同一 Wi-Fi 下会自动重连。</string>
+    <string name="test_connection">测试连接</string>
+    <string name="advanced">高级配对</string>
+    <string name="save_pairing">保存配对</string>
+    <string name="import_file">导入文件</string>
+    <string name="paste_config">粘贴配置</string>
+    <string name="cancel">取消</string>
+    <string name="write_title">允许电脑编辑</string>
+    <string name="write_summary">允许这台电脑新增、修改日程，不支持删除。</string>
+    <string name="auto_title">后台自动同步</string>
+    <string name="auto_summary">约每 15 分钟一次，省电时可能延后。</string>
+</resources>

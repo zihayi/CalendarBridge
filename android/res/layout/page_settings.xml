@@ -1,0 +1,28 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/page_settings" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:scrollbars="none">
+    <local.calendar.readonly.BridgeColumn style="@style/Page" android:layout_gravity="top|center_horizontal">
+        <TextView style="@style/Label.Kicker" android:text="PREFERENCES" />
+        <TextView style="@style/Label.Title" android:text="@string/settings" />
+        <LinearLayout style="@style/Card">
+            <TextView style="@style/Label" android:text="配对电脑" android:drawableStart="@drawable/ic_monitor" android:drawablePadding="9dp" android:gravity="center_vertical" />
+            <TextView android:id="@+id/computer_address" style="@style/Label.Body" android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:baselineAligned="false">
+                <Button android:id="@+id/search_action" style="@style/Action.Half" android:text="@string/search" />
+                <Space android:layout_width="8dp" android:layout_height="1dp" />
+                <Button android:id="@+id/test_action" style="@style/Action.Half" android:text="@string/test_connection" />
+            </LinearLayout>
+            <View style="@style/Rule" android:layout_marginTop="14dp" />
+            <Button android:id="@+id/advanced_action" style="@style/Action" android:text="@string/advanced" android:gravity="start|center_vertical"
+                android:paddingStart="0dp" android:paddingEnd="2dp" android:background="?android:attr/selectableItemBackground" android:drawableEnd="@drawable/ic_chevron" />
+            <TextView style="@style/Label.Small" android:text="导入配对文件、粘贴或手动填写配置。" />
+        </LinearLayout>
+
+        <TextView style="@style/Label.Section" android:text="同步与权限" />
+        <LinearLayout style="@style/Card" android:paddingVertical="5dp">
+            <Switch android:id="@+id/automatic" style="@style/PreferenceSwitch" android:text="@string/auto_title" />
+            <View style="@style/Rule" />
+            <Switch android:id="@+id/writing" style="@style/PreferenceSwitch" android:text="@string/write_title" />
+        </LinearLayout>
+        <TextView android:id="@+id/settings_hint" style="@style/Label.Small" android:layout_marginTop="10dp" />
+        <TextView android:id="@+id/version" style="@style/Label.Small" android:layout_marginTop="20dp" android:textColor="@color/muted" />
+    </local.calendar.readonly.BridgeColumn>
+</ScrollView>

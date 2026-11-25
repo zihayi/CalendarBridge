@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/shell"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/surface">
+    <local.calendar.readonly.BridgeColumn android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+        android:minHeight="56dp" android:gravity="center_vertical" android:paddingStart="20dp" android:paddingEnd="20dp">
+        <ImageView android:layout_width="27dp" android:layout_height="27dp" android:src="@drawable/brand_mark" android:importantForAccessibility="no" />
+        <TextView style="@style/Label" android:text="WallNote" android:textSize="23sp" android:letterSpacing="-0.035" android:textColor="#2D4237" android:layout_marginStart="9dp" />
+        <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginStart="2dp" android:translationY="6dp" android:background="@drawable/dot" />
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <TextView style="@style/Label.Small" android:text="手机端" android:background="@drawable/soft_tile" android:paddingHorizontal="9dp" android:paddingVertical="4dp" android:textColor="@color/green_dark" />
+    </local.calendar.readonly.BridgeColumn>
+    <View style="@style/Rule" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="@color/paper">
+        <include layout="@layout/page_sync" />
+        <include layout="@layout/page_settings" />
+    </FrameLayout>
+    <local.calendar.readonly.BridgeColumn android:id="@+id/notice" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+        android:visibility="gone" android:gravity="center_vertical" android:background="@color/green_soft" android:paddingStart="20dp" android:paddingEnd="6dp">
+        <TextView android:id="@+id/notice_text" style="@style/Label.Body" android:layout_width="0dp" android:layout_weight="1" android:paddingVertical="9dp"
+            android:maxLines="4" android:ellipsize="end" android:accessibilityLiveRegion="polite" />
+        <ImageButton android:id="@+id/notice_close" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_close"
+            android:background="?android:attr/selectableItemBackgroundBorderless" android:contentDescription="关闭提示" />
+    </local.calendar.readonly.BridgeColumn>
+    <View style="@style/Rule" />
+    <local.calendar.readonly.BridgeColumn android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+        android:paddingHorizontal="16dp" android:paddingVertical="6dp">
+        <Button android:id="@+id/tab_sync" style="@style/Action.Tab" android:text="同步" android:textSize="12sp"
+            android:drawableTop="@drawable/ic_calendar" android:drawablePadding="2dp" android:drawableTint="@color/tab_ink" />
+        <Space android:layout_width="8dp" android:layout_height="1dp" />
+        <Button android:id="@+id/tab_settings" style="@style/Action.Tab" android:text="@string/settings" android:textSize="12sp"
+            android:drawableTop="@drawable/ic_sliders" android:drawablePadding="2dp" android:drawableTint="@color/tab_ink" />
+    </local.calendar.readonly.BridgeColumn>
+</LinearLayout>
